@@ -1,0 +1,15 @@
+export enum ValidationErrorMessages {
+  InvalidDomainFormat = "Please provide a valid domain",
+  ExceededLookupLimit = "DNS lookup count in your SPF record (11) exceeds the maximum limit of 10.",
+  InvalidIncludeDomain = "The value in include element should be a valid domain name.",
+  DuplicateInclude = "Duplicate include:_spf.google.com term causes unnecessary additional lookups. Please remove the duplicates.",
+  NestedIncludeLookup = "3 NESTED LOOKUPS",
+  DuplicateIPv4 = "Duplicate ip4 mechanism",
+  InvalidIPv4 = "The ip4 mechanism in your SPF record contains an invalid IP address.",
+  InvalidIPv6 = "The ip6 mechanism in your SPF record contains an invalid IP address.",
+  MissingAllTag = "The 'all' tag is missing from the record which is equivalent to '?all' (neutral) or the absence of an SPF record. Ensure the mechanism is either '-all' (hard fail) or '~all' (soft fail). and update your record.",
+  WeakAllPolicy = "To have maximum security, ensure the mechanism is either '~all' (soft fail) or '-all' (hard fail) and update your record",
+  InvalidARecord = "Invalid A domain:",
+  MultipleRedirects = "Please remove this element from your SPF record.",
+  InvalidRedirectDomain = "Make sure the modifier is not empty and contains a valid domain.",
+}
